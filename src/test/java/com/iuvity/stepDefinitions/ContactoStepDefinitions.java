@@ -1,5 +1,6 @@
 package com.iuvity.stepDefinitions;
 
+import com.iuvity.questions.ValidarElMensaje;
 import com.iuvity.tasks.ClickContactarTask;
 import com.iuvity.tasks.LlenadoFormularioContactoTask;
 import com.iuvity.utils.Excel;
@@ -12,6 +13,8 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class ContactoStepDefinitions {
     private static ArrayList<Map<String, String>> leerExcel =  new ArrayList<Map<String, String>>();
@@ -38,7 +41,7 @@ public class ContactoStepDefinitions {
     }
     @Entonces("Valido el texto al final del formulario")
     public void validoElTextoAlFinalDelFormulario() {
-
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidarElMensaje.value()));
     }
 
 

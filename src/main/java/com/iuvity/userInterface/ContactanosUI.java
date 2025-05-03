@@ -3,6 +3,9 @@ package com.iuvity.userInterface;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class ContactanosUI {
+    public static final Target LBL_BIENVENIDA = Target.
+            the("texto a validar en la automatizacion").
+            locatedBy("(//span[@style='color: #ffffff;'])[1]");
     public static final Target TXT_NOMBRE = Target.
             the("campo de texto del nombre").
             locatedBy("//input[@id='firstname-e51b2987-1ee8-48f9-9671-b74a957be20e_3701']");
